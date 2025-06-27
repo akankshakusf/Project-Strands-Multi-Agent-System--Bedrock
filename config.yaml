@@ -18,19 +18,23 @@ model_information:
     # uses at runtime during inference
     inference_parameters:
       temperature: 0.1
+
+
   technical_agent_model_info: 
     # Represents the model id that the agent will use within 
     # the strands agents SDK
-    model_id: us.anthropic.claude-3-5-sonnet-20240620-v1:0
+    model_id: us.anthropic.claude-3-sonnet-20240229-v1:0
     # Represents the inference parameters that the foundation model
     # uses at runtime during inference
     inference_parameters:
       temperature: 0.1
       max_tokens: 512
+
+      
   market_analysis_agent:
     # Represents the model id that the agent will use within 
     # the strands agents SDK
-    model_id: us.anthropic.claude-3-5-sonnet-20240620-v1:0
+    model_id: us.anthropic.claude-3-sonnet-20240229-v1:0
     # Represents the inference parameters that the foundation model
     # uses at runtime during inference
     inference_parameters:
@@ -43,7 +47,7 @@ model_information:
 code_gen_model_info:
   # Represents the model id that the agent will use within 
   # the strands agents SDK
-  model_id: us.anthropic.claude-3-5-sonnet-20240620-v1:0
+  model_id: us.anthropic.claude-3-sonnet-20240229-v1:0
   # Represents the inference parameters that the foundation model
   # uses at runtime during inference
   inference_parameters:
