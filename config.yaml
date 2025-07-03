@@ -39,6 +39,16 @@ model_information:
       temperature: 0.1
       max_tokens: 512
 
+  # Represents the model information for the lead analyst agent
+  # The lead agent is responsible for orchestrating analysis, delegating tasks, 
+  # and synthesizing results from other specialist agents. For robust reasoning, 
+  # we use the same Claude Sonnet model as our technical and market agents.
+  lead_analyst_agent_model_info:
+    model_id: us.anthropic.claude-3-sonnet-20240229-v1:0
+    inference_parameters:
+      temperature: 0.2
+      max_tokens: 2048
+
   # This is the code generation model that is used within the tool
   # to generate code, note that this might be different from the actual
   # large language model that powers the agent
