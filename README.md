@@ -23,7 +23,7 @@ This repository showcases a **hierarchical Multi-Agent Collaboration (MAC)** sys
   - **Features:** Dynamic tool creation, meta-tooling, human-in-the-loop, observability, logging
 
 - **Fundamental Analyst Agent**
-  - **Model:** Claude 3 Haiku
+  - **Model:** Claude 3 Sonnet
   - **Focus:** Income statements, balance sheets, cash flow, ratios, valuation
 
 - **Technical Analyst Agent**
@@ -98,4 +98,5 @@ Sensitive tool calls (e.g., insider trading, news access) trigger an approval pr
    Results are synthesized into a markdown summary/report.
 
 ---
-
+## 🧩 Sample Executive report
+<img src="https://github.com/akankshakusf/Project-Strands-Multi-Agent-System--Bedrock/blob/master/img/journal.png" width="100%" />
