@@ -3,6 +3,9 @@
 A cutting-edge, modular AI system for advanced financial analysis—built using the Strands Agents SDK and leveraging state-of-the-art LLMs (Claude 4 Sonnet, Claude 3 Haiku, Amazon Nova Lite) via AWS Bedrock. This project demonstrates a full-stack, agentic approach to automating investment analysis with human-in-the-loop controls, meta-tooling, detailed observability, and code execution.
 
 ---
+### Architecture
+
+<img src="https://github.com/akankshakusf/Project-Strands-Multi-Agent-System--Bedrock/blob/master/img/Architecture.png" width="100%" />
 
 ## 🚀 Overview
 
@@ -31,9 +34,7 @@ This repository showcases a **hierarchical Multi-Agent Collaboration (MAC)** sys
   - **Model:** Claude 3 Haiku
   - **Focus:** Options chain, insider trades, news aggregation, sentiment
 
-### Diagram
 
-![Agent System Diagram]([docs/hedge_fund_agent_diagram.png](https://github.com/akankshakusf/Project-Strands-Multi-Agent-System--Bedrock/blob/master/img/Architecture.png))
 
 ---
 
