@@ -1,49 +1,32 @@
-from strands import tool
+from strands import tool 
 
 @tool
-def aapl_stock_comparison() -> str:
+def aapl_stock_comparison(start_year: int = 2022, end_year: int = 2026) -> str:
     """
-    Compare AAPL's stock performance across 2022-2026.
-    
+    Compares Apple (AAPL) stock performance across a given year range.
+
+    Args:
+        start_year (int): Starting year for comparison (inclusive)
+        end_year (int): Ending year for comparison (inclusive)
+
     Returns:
-        str: Multi-year comparison of AAPL's key financial metrics and stock price.
+        str: Formatted multi-year comparison table for AAPL stock
     """
+    aapl_data = [
+        {"year": 2022, "stock_price": 180.00, "revenue": 365.8, "net_income": 99.8},
+        {"year": 2023, "stock_price": 195.50, "revenue": 394.3, "net_income": 97.0},
+        {"year": 2024, "stock_price": 225.00, "revenue": 436.7, "net_income": 93.7},
+        {"year": 2025, "stock_price": 210.50, "revenue": 490.1, "net_income": 104.5},
+        {"year": 2026, "stock_price": 245.00, "revenue": 522.5, "net_income": 118.2},
+    ]
     
-    years = [2022, 2023, 2024, 2025, 2026]
+    filtered_data = [data for data in aapl_data if start_year <= data["year"] <= end_year]
     
-    stock_prices = {
-        2022: 180.0,
-        2023: 195.5, 
-        2024: 225.0,
-        2025: 210.5,
-        2026: 245.0
-    }
-    
-    revenues = {
-        2022: 365.8,
-        2023: 394.3,
-        2024: 436.7, 
-        2025: 490.1,
-        2026: 522.5
-    }
-    
-    net_incomes = {
-        2022: 99.8,
-        2023: 97.0,
-        2024: 93.7,
-        2025: 104.5, 
-        2026: 118.2
-    }
-    
-    comparison = "AAPL Multi-Year Comparison:\\n\\n"
-    comparison += "Year | Stock Price | Revenue ($B) | Net Income ($B)\\n" 
-    comparison += "-----|--------------|---------------|-----------------\\n"
-    
-    for year in years:
-        if year in stock_prices and year in revenues and year in net_incomes:
-            price = stock_prices[year]
-            rev = revenues[year] 
-            net = net_incomes[year]
-            comparison += f"{year} | ${price:.2f} | {rev:.1f} | {net:.1f}\\n"
+    table = "Year | Stock Price | Revenue ($B) | Net Income ($B)\n-----|--------------|---------------|-----------------\n"
+    for data in filtered_data:
+        row = "{} | ${:.2f} | {:.1f} | {:.1f}\n".format(
+            data["year"], data["stock_price"], data["revenue"], data["net_income"]
+        )
+        table += row
         
-    return comparison
+    return table
